@@ -1,20 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _memcpy - irontnoux2
- * @dest: pointer to char params
- * @src: pointer to char params
- * @n: size
- * Return: *dest
+ * _strchr - a function that locates a character in a string.
+ * @s: an input string to search in
+ * @c: an input character to locate into string s
+ * Return: returns pointer to c position
  */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strchr(char *s, char c)
 {
-	unsigned int i;
 
-	for (i = 0; i < n; i++)
+	while (*s)
 	{
-		dest[i] = src[i];
+		if (c == *s)
+			return (s);
+		s++;
 	}
-	return (dest);
+	if (c == *s)
+		return (s);
+	return (NULL);
 }
