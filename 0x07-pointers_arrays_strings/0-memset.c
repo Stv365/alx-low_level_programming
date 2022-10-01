@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * _memset - ironnou
- * @s: pointer to char params
- * @b: data to change
- * @n: index
- * Return: *s
+ * _memset - a function that fills memory with constant bytes
+ * @s: location to fill
+ * @b: char to fill location with
+ * @n: number of bytes to fill
+ * Return: returns pointer to location filled
  */
-
-char *_memset(char *s, char b,unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsined int i;
-	
-	for (i = 0; i < n; i++)
+	char *start = s;
+
+	while (n--)
 	{
-		s[i] = b;
+		*s = b;
+		s++;
 	}
-	return (s);
+	return (start);
 }
